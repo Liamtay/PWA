@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn PWA</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body>
+    <script>
+        window.navigator.serviceWorker.register('./sw.js', { scope: '/' })
+            .then(registration => {
+                console.log(registration)
+            }, error => {
+                console.error(error)
+            })
+    </script>
+</body>
+
+</html>
